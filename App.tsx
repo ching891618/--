@@ -19,8 +19,13 @@ const NavBar = ({ activePage, setPage }: { activePage: Page; setPage: (p: Page) 
   return (
     <nav className="sticky top-0 z-50 w-full bg-[#f4f7f2]/90 backdrop-blur-md border-b border-gray-200/50 mb-12">
       <div className="max-w-[1600px] mx-auto px-6 md:px-12 h-20 flex items-center justify-between">
-        {/* Logo Removed */}
-        <div />
+        {/* Logo */}
+        <div
+          onClick={() => setPage('home')}
+          className="cursor-pointer select-none hover:opacity-70 transition-opacity"
+        >
+          <img src="/logo.webp" alt="OLIVE Logo" className="h-8 w-auto object-contain" />
+        </div>
 
         {/* Links */}
         <div className="flex items-center gap-8">
